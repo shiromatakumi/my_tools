@@ -10,7 +10,7 @@ if(isset($_GET['word'])) {
 }
 if(isset($_GET['id'])) {
   $movie_id = $_GET['id'];
-} elseif($_SESSION['id']) {
+} elseif(isset($_SESSION['id'])) {
   $movie_id = $_SESSION['id'];
 }
 
@@ -49,8 +49,8 @@ try {
   $htmlBody .= sprintf('<p>An client error occurred: <code>%s</code></p>',
     htmlspecialchars($e->getMessage()));
 }
-$_SESSION['word'] = $word;
-$_SESSION['id'] = $movie_id;
+if(isset($word)) $_SESSION['word'] = $word;
+if(isset($word)) $_SESSION['id'] = $movie_id;
 
 ?>
 
@@ -97,9 +97,9 @@ $_SESSION['id'] = $movie_id;
 </div>
 <div class="get-code" id="get-code">
     <div class="pre">
-      <?php echo $source; ?>
+      <?php if(isset($source)) echo $source; ?>
     </div>
-    <textarea name=""><?php echo $source_str; ?></textarea>
+    <textarea name=""><?php if(isset($source_str)) echo $source_str; ?></textarea>
   </div>
 <div class="clear-code">
   <a href="./youtube.php">初期化する</a>
