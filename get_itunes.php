@@ -45,14 +45,14 @@ if(isset($album_item_all) && isset($num_album) && $num_album !== 'no'){
 }
 
 if(isset($num)&&$num!=='no') {
-  $source = '<a href="'.$trackViewUrl.'&app=itunes&at='.$affi_token.'" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/ja-jp/itunes-lrg.svg) no-repeat;width:110px;height:40px;background-size:contain;"><!--itunes--></a>';
+  $source = '<a href="'.$trackViewUrl.'&app=itunes&at='.$affi_token.'" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/ja-jp/itunes-lrg.svg) no-repeat;width:110px;height:40px;background-size:contain;"><span style="display:none;">.</span></a>';
 } elseif(isset($num)&&$num==='no') {
   $source = '&nbsp;';
 }
 if(isset($source)) {$source_str = htmlspecialchars($source, ENT_QUOTES);}
 
 if(isset($num_album)&&$num_album!=='no') {
-  $album_source = '<a href="'.$album_trackViewUrl.'?app=itunes&at='.$affi_token.'" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/ja-jp/itunes-lrg.svg) no-repeat;width:110px;height:40px;background-size:contain;"><!--itunes--></a>';
+  $album_source = '<a href="'.$album_trackViewUrl.'?app=itunes&at='.$affi_token.'" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/ja-jp/itunes-lrg.svg) no-repeat;width:110px;height:40px;background-size:contain;"><span style="display:none;">.</span></a>';
 } elseif(isset($num_album)&&$num_album==='no'){
   $album_source = '&nbsp;';
 }

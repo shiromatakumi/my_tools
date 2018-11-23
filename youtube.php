@@ -39,7 +39,7 @@ try {
     $videoId = $videoItem['id'];
     $videoTitle = $videoItem['snippet']['title'];
 
-    $source = '<div class="youtube-wrap"><div class="youtube" data-video="http://www.youtube.com/embed/'.$videoId.'?autoplay=1"><img src="http://img.youtube.com/vi/'.$videoId.'/hqdefault.jpg" alt="'.$videoTitle.'" /></div></div>'.PHP_EOL.'<p><strong>'.$videoTitle.'</strong></p>';
+    $source = '<div class="youtube-wrap"><div class="youtube" data-video="https://www.youtube.com/embed/'.$videoId.'?autoplay=1"><img src="https://img.youtube.com/vi/'.$videoId.'/hqdefault.jpg" alt="'.$videoTitle.'" /></div></div>'.PHP_EOL.'<p><strong>'.$videoTitle.'</strong></p>';
     $source_str = htmlspecialchars($source, ENT_QUOTES);
   }
 } catch (Google_Service_Exception $e) {
