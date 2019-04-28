@@ -13,6 +13,9 @@ p {
   width: 1200px;
   margin: 0 auto;
 }
+.search-box input[type="text"] {
+  width: 300px;
+}
 .result-song {
   width: 45%;
   float: left;
@@ -60,6 +63,8 @@ p {
   font-size: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+  background-color: #28a9af;
+  color: #fff;
 }
 .get-code {
   margin-top: 20px;
@@ -67,7 +72,7 @@ p {
 }
 .get-code textarea {
   width: 800px;
-  height: 80px;
+  height: 120px;
   resize: none;
 }
 .clear-code {
@@ -84,6 +89,19 @@ p {
   background-color:#666;
   color: #fff;
   text-decoration: none;
+}
+.get-code--apple-music {
+  display: flex;
+  justify-content: space-between;
+}
+.get-code--apple-music textarea {
+  width: 100%;
+}
+.single-area {
+  width: 49%;
+}
+.album-area {
+  width: 49%;
 }
 /* youtube */
 /* YouTube埋め込み用 */
@@ -218,4 +236,29 @@ table {
   max-width: 640px;
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.apple-music-table {
+  margin: 34px auto;
+  background-color: #eee;
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+}
+.apple-music-table th {
+  padding: 6px;
+  background-color: #d24747;
+  color: #fff;
+  font-size: .9rem;
+  border: none;
+}
+.apple-music-table td {
+  padding: 10px;
+  border: none;
+}
+.apple-music-table p {
+  margin: 0;
+  font-size: .9rem;
 }
